@@ -1,5 +1,4 @@
-
-const CORS_PROXY = "https://api.allorigins.win/get?url="; // إضافة تعريف الـ CORS Proxy
+const CORS_PROXY = "https://api.allorigins.win/get?url="; 
 const CODEFORCES_API = "https://codeforces.com/api/problemset.problems";
 
 let currentPage = 1;
@@ -11,7 +10,10 @@ async function fetchProblems(page) {
 
     try {
         console.log("Fetching problems from API...");
-        const response = await fetch(CORS_PROXY + encodeURIComponent(CODEFORCES_API));
+        const apiUrl = CORS_PROXY + encodeURIComponent(CODEFORCES_API);
+        console.log("API URL:", apiUrl); // طباعة رابط API
+
+        const response = await fetch(apiUrl);
         console.log("API Response received:", response);
 
         if (!response.ok) {
@@ -19,9 +21,10 @@ async function fetchProblems(page) {
         }
 
         const data = await response.json();
+        console.log("API Data received:", data); // طباعة البيانات المستلمة
+
         const parsedData = JSON.parse(data.contents);
-        
-        console.log("Parsed Data:", parsedData);
+        console.log("Parsed Data:", parsedData); // طباعة البيانات المحللة
 
         if (parsedData.status === 'OK') {
             const problems = parsedData.result.problems;
