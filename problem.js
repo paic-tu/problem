@@ -8,7 +8,10 @@ const SECRET = "9da2871275fa58bb040ba9dd16aec9449056cab6";
 
 async function getProblemDetails(contestId, index) {
     try {
-        const response = await fetch(CORS_PROXY + encodeURIComponent(`${CODEFORCES_API}?contestId=${contestId}&index=${index}`));
+        const apiUrl = `${CODEFORCES_API}?contestId=${contestId}&index=${index}`;
+        console.log("API URL:", apiUrl); // تحقق من الرابط
+
+        const response = await fetch(CORS_PROXY + encodeURIComponent(apiUrl));
         const data = await response.json();
         const parsedData = JSON.parse(data.contents);
 

@@ -1,9 +1,10 @@
-let currentPage = 1;
-const problemsPerPage = 10;
-const CORS_PROXY = "https://api.allorigins.win/get?url=";
+
+const CORS_PROXY = "https://api.allorigins.win/get?url="; // إضافة تعريف الـ CORS Proxy
 const CODEFORCES_API = "https://codeforces.com/api/problemset.problems";
 
-// Function to fetch problems with additional logging
+let currentPage = 1;
+const problemsPerPage = 10;
+
 async function fetchProblems(page) {
     const container = document.getElementById('problems-container');
     container.innerHTML = '<div class="loading-indicator"></div>'; // Display loading indicator
