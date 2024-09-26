@@ -1,15 +1,26 @@
-
 let currentPage = 1;
 const problemsPerPage = 10;
+const CORS_PROXY = "https://api.allorigins.win/get?url=";
+const CODEFORCES_API = "https://codeforces.com/api/problemset.problems";
 
+// Function to fetch problems with additional logging
 async function fetchProblems(page) {
     const container = document.getElementById('problems-container');
-    container.innerHTML = '<div class="loading-indicator"></div>';
+    container.innerHTML = '<div class="loading-indicator"></div>'; // Display loading indicator
 
     try {
+        console.log("Fetching problems from API...");
         const response = await fetch(CORS_PROXY + encodeURIComponent(CODEFORCES_API));
+        console.log("API Response received:", response);
+
+        if (!response.ok) {
+            throw new Error(`HTTP Error! status: ${response.status}`);
+        }
+
         const data = await response.json();
         const parsedData = JSON.parse(data.contents);
+        
+        console.log("Parsed Data:", parsedData);
 
         if (parsedData.status === 'OK') {
             const problems = parsedData.result.problems;
@@ -18,7 +29,7 @@ async function fetchProblems(page) {
             throw new Error('Failed to fetch problems from Codeforces API');
         }
     } catch (error) {
-        console.error('Error:', error);
+        console.error('Error fetching problems:', error);
         container.innerHTML = '<p>حدث خطأ أثناء تحميل المسائل. حاول مرة أخرى لاحقًا.</p>';
     }
 }
