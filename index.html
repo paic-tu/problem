@@ -7,11 +7,13 @@
     <title>نادي البرمجة والذكاء الاصطناعي</title>
     <link href="style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMgYXzWZ2xP1qlz7yiFfRshkj6pZ/eOHVx1Jc" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<!-- Advanced Navbar with hover effects -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.html">
             <img src="logo_files/logo.png" alt="Logo" style="height: 50px; margin-right: 10px;">
@@ -39,55 +41,86 @@
     </div>
 </nav>
 
-<header class="hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('logo_files/banner.jpg') center center/cover; height: 400px;">
-    <div class="container text-center text-white h-100 d-flex align-items-center justify-content-center">
-        <div>
-            <h1 class="display-3">مرحبًا بك في نادي البرمجة والذكاء الاصطناعي</h1>
-            <p class="lead">اكتشف، تعلم، وشارك في عالم البرمجة والذكاء الاصطناعي.</p>
-            <a href="index.html" class="btn btn-lg btn-primary">عرض المسائل</a>
+<!-- Hero Section with Animation and Gradient Background -->
+<header class="hero-section text-white text-center" style="background: linear-gradient(120deg, #2980b9, #2c3e50); height: 500px;">
+    <div class="container h-100 d-flex align-items-center justify-content-center">
+        <div data-aos="fade-up">
+            <h1 class="display-3">أهلاً بك في نادي البرمجة والذكاء الاصطناعي</h1>
+            <p class="lead">اكتشف، تعلم، وتحدى نفسك في عالم البرمجة.</p>
+            <a href="index.html" class="btn btn-lg btn-light">استعراض المسائل</a>
         </div>
     </div>
 </header>
 
-<div class="container mt-4">
-    <div class="row text-center mt-5">
-        <div class="col-md-4">
-            <div class="card shadow-lg">
-                <div class="card-body">
-                    <i class="fas fa-laptop-code fa-4x mb-3 text-primary"></i>
-                    <h5 class="card-title">المسائل البرمجية</h5>
-                    <p class="card-text">اختبر مهاراتك البرمجية من خلال مجموعة من المسائل البرمجية التحدّية.</p>
-                    <a href="index.html" class="btn btn-primary">عرض المسائل</a>
+<!-- Cards Section with Animation Effects -->
+<section class="cards-section py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4" data-aos="zoom-in">
+                <div class="card shadow-lg mb-4">
+                    <div class="card-body">
+                        <i class="fas fa-laptop-code fa-4x mb-3 text-primary"></i>
+                        <h5 class="card-title">المسائل البرمجية</h5>
+                        <p class="card-text">اختبر مهاراتك البرمجية من خلال مجموعة من المسائل التحدّية.</p>
+                        <a href="index.html" class="btn btn-primary">عرض المسائل</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card shadow-lg">
-                <div class="card-body">
-                    <i class="fas fa-trophy fa-4x mb-3 text-warning"></i>
-                    <h5 class="card-title">المسابقات البرمجية</h5>
-                    <p class="card-text">شارك في المسابقات لتثبت مهاراتك وتتعلم من الآخرين.</p>
-                    <a href="contests.html" class="btn btn-primary">عرض المسابقات</a>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                <div class="card shadow-lg mb-4">
+                    <div class="card-body">
+                        <i class="fas fa-trophy fa-4x mb-3 text-warning"></i>
+                        <h5 class="card-title">المسابقات البرمجية</h5>
+                        <p class="card-text">شارك في المسابقات لتثبت مهاراتك وتتعلم من الآخرين.</p>
+                        <a href="contests.html" class="btn btn-primary">عرض المسابقات</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card shadow-lg">
-                <div class="card-body">
-                    <i class="fas fa-upload fa-4x mb-3 text-success"></i>
-                    <h5 class="card-title">تقديم الأكواد</h5>
-                    <p class="card-text">قدّم حلولك للمسائل، واحصل على التقييم الفوري لكودك.</p>
-                    <a href="submit_code.html" class="btn btn-primary">تقديم الأكواد</a>
+            <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+                <div class="card shadow-lg mb-4">
+                    <div class="card-body">
+                        <i class="fas fa-upload fa-4x mb-3 text-success"></i>
+                        <h5 class="card-title">تقديم الأكواد</h5>
+                        <p class="card-text">قدّم حلولك، واحصل على التقييم الفوري لكودك.</p>
+                        <a href="submit_code.html" class="btn btn-primary">تقديم الأكواد</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
-<div class="footer bg-dark text-white mt-5 p-4 text-center">
-    <p>جميع الحقوق محفوظة &copy; نادي البرمجة والذكاء الاصطناعي - 2024</p>
-</div>
+<!-- Advanced Footer -->
+<footer class="footer bg-dark text-white py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h5>معلومات عن النادي</h5>
+                <p>نادي البرمجة والذكاء الاصطناعي هو منصة لتعلم ومشاركة المهارات البرمجية، وتطوير المواهب في هذا المجال.</p>
+            </div>
+            <div class="col-md-4">
+                <h5>روابط مفيدة</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white">الرئيسية</a></li>
+                    <li><a href="contests.html" class="text-white">المسابقات</a></li>
+                    <li><a href="submit_code.html" class="text-white">تقديم الأكواد</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="logo_files/logo.png" alt="Logo" style="height: 70px;">
+                <p>تابعونا على وسائل التواصل الاجتماعي</p>
+                <a href="#" class="text-white"><i class="fab fa-facebook fa-2x mx-2"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-twitter fa-2x mx-2"></i></a>
+                <a href="#" class="text-white"><i class="fab fa-linkedin fa-2x mx-2"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
 </html>
