@@ -1,0 +1,37 @@
+{
+    "status": "OK",
+    "result": {
+        "problems": [
+            {
+                "contestId": 219158,
+                "index": "A",
+                "name": "Sample Problem A",
+                "tags": [
+                    "math",
+                    "implementation"
+                ],
+                "url": "https://codeforces.com/problemset/problem/219158/A"
+            },
+            {
+                "contestId": 219158,
+                "index": "B",
+                "name": "Sample Problem B",
+                "tags": [
+                    "greedy",
+                    "sorting"
+                ],
+                "url": "https://codeforces.com/problemset/problem/219158/B"
+            },
+            {
+                "contestId": 219158,
+                "index": "C",
+                "name": "Sample Problem C",
+                "tags": [
+                    "data structures",
+                    "dfs and similar"
+                ],
+                "url": "https://codeforces.com/problemset/problem/219158/C"
+            }
+        ]
+    }
+}
