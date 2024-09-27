@@ -18,7 +18,7 @@ async function fetchLocalProblems() {
                 <div class="problem-card">
                     <h5>${problem.contestId} - ${problem.index}: ${problem.name}</h5>
                     <p>التصنيف: ${problem.tags.join(', ') || 'غير محدد'}</p>
-                    <a href="${problem.url}" class="btn btn-primary" target="_blank">عرض المسألة</a>
+                    <a href="problem_detail.html?index=${problem.index}" class="btn btn-primary">عرض التفاصيل ورفع الكود</a>
                 </div>
             `).join('');
         } else {
