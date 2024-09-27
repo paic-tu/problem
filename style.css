@@ -8,10 +8,23 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.jumbotron {
-    background-image: url('banner.jpg');
+.hero-section {
     background-size: cover;
-    color: #fff;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    animation: fadeInDown 2s ease-in-out;
+}
+
+.hero-section p {
+    font-size: 1.3rem;
 }
 
 .card {
@@ -37,4 +50,9 @@ body {
 .btn-primary:hover {
     background-color: #e67e22;
     border-color: #e67e22;
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
