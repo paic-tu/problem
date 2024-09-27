@@ -1,3 +1,4 @@
+
 const CORS_PROXY = "https://api.allorigins.win/get?url="; 
 const CODEFORCES_API = "https://codeforces.com/api/problemset.problems";
 
