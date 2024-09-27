@@ -1,0 +1,9 @@
+
+{
+    "result": {
+        "problems": [
+            { "contestId": 219158, "index": "A", "name": "Sample Problem A", "tags": ["implementation"] },
+            { "contestId": 219158, "index": "B", "name": "Sample Problem B", "tags": ["math", "greedy"] }
+        ]
+    }
+}
